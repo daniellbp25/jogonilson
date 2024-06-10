@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo de Canvas</title>
+    <script src="game.js" defer></script>
+    <style>
+        #gameOverContainer, #youWinContainer {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 10;
+        }
+        #gameOver, #youWin {
+            font-size: 48px;
+            color: red;
+        }
+        #reiniciarBtn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 24px;
+        }
+        .margin{
+            border: 10px
+        }
+    </style>
+</head>
+<body onload="iniciarJogo()">
+    <div id="gameOverContainer">
+        <div id="gameOver">Game Over</div>
+        <button id="reiniciarBtn" onclick="reiniciarJogo()">Reiniciar</button>
+    </div>
+    <div id="youWinContainer">
+        <div id="youWin">Você Ganhou!</div>
+        <button id="reiniciarBtn" onclick="reiniciarJogo()">Reiniciar</button>
+    </div>
+    <canvas id="gameCanvas" width="1350" height="600" >
+        Este navegador não suporta o elemento canvas do HTML5.
+    </canvas>
+    <audio id="musicaAcao" loop>
+        <source src="musica-acao.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+    <audio id="somTiro">
+        <source src="tiro.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+    <audio id="somExplosao">
+        <source src="explosao.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+    
+</body>
+</html>
