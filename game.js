@@ -173,6 +173,7 @@ function atirarInimigo() {
 
 function colisao(tiro, x, y, largura, altura) {
     return tiro.x > x && tiro.x < x + largura && tiro.y > y && tiro.y < y + altura;
+    
 }
 
 function reposicionarInimigo() {
